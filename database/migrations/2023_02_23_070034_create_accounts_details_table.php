@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('accounts_details', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('cari_id');
+            $table->unsignedBigInteger('transaction_types_id');
+            $table->date('islem_tarihi');
+            $table->unsignedDecimal('islem_miktari');
+            $table->string('aciklama');
+            $table->bigInteger('bakiye');
+            $table->foreign('cari_id')->references('id')->on('accounts');
+            $table->foreign('transaction_types_id')->references('id')->on('transaction_types');
             $table->timestamps();
         });
     }
