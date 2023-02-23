@@ -1,2 +1,2 @@
-# basit-muhasebe-app
-This repo is to imporving Laravel and PHP Skill. About Basic Accounting. with coorparate Ahmet Sait AYYILDIZ.
+# Basic Acconting App
+This repo is for imporving my Laravel and PHP Skills. About Basic Accounting. with coorparate Ahmet Sait AYYILDIZ.
