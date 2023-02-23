@@ -21,7 +21,9 @@ return new class extends Migration
             $table->string('vergi_dairesi',100);
             $table->string('tel_no',10);
             $table->string('gsm',10);
-            $table->string('adres',255);
+            $table->string('adres');
+            $table->string('il',25);
+            $table->string('ilçe',25);
             $table->timestamps();
         });
     }
