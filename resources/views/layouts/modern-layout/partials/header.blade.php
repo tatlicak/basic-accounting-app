@@ -121,8 +121,17 @@
           </ul>
         </li>
         <li class="onhover-dropdown p-0">
-          <button class="btn btn-primary-light" type="button"><i data-feather="log-out"></i>Log out</button>
-        </li>
+
+          <a class="btn btn-primary-light" href="{{ route('logout') }}"
+             onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();"><i data-feather="log-out"></i>
+              {{ __('Logout') }}
+          </a>
+
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+              @csrf
+          </form>
+      </li>
       </ul>
     </div>
     <div class="d-lg-none mobile-toggle pull-right w-auto"><i data-feather="more-horizontal"></i></div>

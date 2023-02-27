@@ -17,12 +17,12 @@ use Illuminate\Support\Facades\Route;
 @include_once('admin_web.php');
 
 Route::get('/', function () {
-    return redirect()->route('index');
-})->name('/');
+    return redirect()->route('login');
+})->name('login');
 
 Route::prefix('starter-kit')->group(function () {
     Route::view('index', 'admin.color-version.index')->name('index');
 });
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
